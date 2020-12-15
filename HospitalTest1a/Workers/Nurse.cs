@@ -12,5 +12,9 @@ namespace HospitalTest1a
         {
 
         }
+        public override string ToString()
+        {
+            return base.ToString() + " - Nurse";
+        }
     }
 }

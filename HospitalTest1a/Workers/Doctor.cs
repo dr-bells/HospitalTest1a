@@ -16,5 +16,9 @@ namespace HospitalTest1a
             this.pwzNumber = PWZNumber;
             this.specialty = specialty;
         }
+        public override string ToString()
+        {
+            return base.ToString() + " - Doctor: " + specialty;
+        }
     }
 }

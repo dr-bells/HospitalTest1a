@@ -11,5 +11,9 @@ namespace HospitalTest1a
         public Adminstrator(string userName, string password, string firstName, string lastName, string peselNumber) : base(userName, password, firstName, lastName, peselNumber)
         {
         }
+        public override string ToString()
+        {
+            return base.ToString() + " - Admin";
+        }
     }
 }

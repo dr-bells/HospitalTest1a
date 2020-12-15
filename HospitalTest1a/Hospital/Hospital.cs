@@ -4,30 +4,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HospitalTest1a
+namespace HospitalTest1a.Hospital
 {
-    class Hospital
+    public class Hospital
     {
-        private string name;
-        public List<string> workersList;    
+        public List<Employee> employeeList;    
 
-        public Hospital(string newName)
+        public Hospital()
         {
-            this.name = newName;
+            employeeList = new List<Employee>();
         }
 
-        public void AddWorker (string name)
+        public void AddEmployee (Employee employee)
         {
-            workersList.Add(name);
+            employeeList.Add(employee);
         }
 
+        public List<Employee> employees()
+        {
+            return employeeList;
+        }
         public void DisplayInfo()
         {
-            Console.WriteLine("Welcome to hospital: " + name + "\n\nWorkers here:\n");
+            Console.WriteLine("Welcome to hospital: \n\nWorkers here:\n");
 
-            foreach (var item in workersList)
+            foreach (var item in employeeList)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(item.ToString());
             }
         }
     }
